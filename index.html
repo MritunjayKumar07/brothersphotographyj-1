@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script src="./js/image.js"></script>
+    <title>Mritunjay Kumar</title>
+  </head>
+  <body>
+    <div id="headerSection">
+      <header>
+        <a href="#">
+          <i
+            class="fa fa-bars"
+            onclick="menuOpen()"
+            style="font-size: 22px"
+          ></i>
+        </a>
+        <div class="logo-branding">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/58590703e4fcb586c80e4914/1482240507755-CDIDMK8BGGCR4QEZIKJ3/TinyStoriesLogo3.fw.png?format=1500w"
+            alt="Logo"
+            width="120px"
+          />
+        </div>
+        <div class="user-info">
+          <nav class="social-icon">
+            <i class="fa fa-instagram" style="font-size: 22px"></i>
+            <i class="fa fa-facebook" style="font-size: 22px"></i>
+          </nav>
+          <div style="margin: auto">
+            <i
+              class="fa fa-search search-icon searchOpen"
+              onclick="openSearch()"
+              style="font-size: 22px"
+            ></i>
+            <i
+              class="fa fa-close seachClose"
+              onclick="closeSearch()"
+              style="font-size: 22px"
+            ></i>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- Menu -->
+    <nav class="menu openClose">
+      <div class="site-profile">
+        <i
+          class="fa fa-close"
+          onclick="menuClose()"
+          style="font-size: 42px"
+        ></i>
+        <ul>
+          <li >
+            <a href="./index.html" style="color: #fd9165"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="./pages/blog/blog.html"><span>Blog</span></a>
+          </li>
+          <li>
+            <a href="./pages/my-story/my-store.html"
+              ><span>Book us now:)</span></a
+            >
+          </li>
+          <li><span>Portrait Shoots</span></li>
+          <li><span>Stories for brands</span></li>
+        </ul>
+        <div class="imageList">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/58590703e4fcb586c80e4914/1482240507755-CDIDMK8BGGCR4QEZIKJ3/TinyStoriesLogo3.fw.png?format=1500w"
+            alt="Logo"
+            width="120px"
+          />
+          <h2>Recently on instagram</h2>
+          <div class="galary">
+            <img
+              src="https://cdn.pixabay.com/photo/2019/03/09/02/12/eyes-4043559_1280.jpg"
+              alt=""
+              width="200px"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2019/03/09/02/12/eyes-4043559_1280.jpg"
+              alt=""
+              width="200px"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2019/03/09/02/12/eyes-4043559_1280.jpg"
+              alt=""
+              width="200px"
+            />
+          </div>
+          <div class="smallScreen-socel-icon">
+            <i class="fa fa-instagram" style="font-size: 22px"></i>
+            <i class="fa fa-facebook" style="font-size: 22px"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="smallScreen-menu">
+      <a href="#" style="text-decoration: none">
+        <i
+          class="fa fa-bars fabars"
+          onclick="menuOpen()"
+          style="font-size: 22px"
+        ></i>
+        <i
+          class="fa fa-close faclose"
+          onclick="menuClose()"
+          style="font-size: 32px"
+        ></i>
+      </a>
+      <div>
+        <h1 class="openMiddleSection" onclick="menuOpenmiddle()">...</h1>
+        <h1 class="closeMiddleSection" onclick="menuClosemiddle()">
+          <i class="fa fa-close" style="font-size: 32px"></i>
+        </h1>
+      </div>
+
+      <div class="mobile-search">
+        <i
+          class="fa fa-search search-icon searchOpen"
+          onclick="openSearch()"
+          style="font-size: 22px"
+        ></i>
+        <i
+          class="fa fa-close seachClose"
+          onclick="closeSearch()"
+          style="font-size: 22px"
+        ></i>
+      </div>
+    </nav>
+    <nav class="smallScreen-search-page">
+      <form class="inner" onsubmit="search(event)">
+        <input type="text" id="searchInput" placeholder="Search..." />
+      </form>
+    </nav>
+
+    <nav class="smallScreen-middle-menu middleSectionSmallScreen">
+      <div class="inner">
+        <div class="profile-pic">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/58590703e4fcb586c80e4914/1482240507755-CDIDMK8BGGCR4QEZIKJ3/TinyStoriesLogo3.fw.png?format=1500w"
+            alt="Logo"
+            width="120px"
+          />
+        </div>
+        <div class="image">
+          <i class="fa fa-instagram" style="font-size: 52px"></i>
+          <i class="fa fa-facebook" style="font-size: 52px"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <div class="carousel-container">
+          <div class="carousel-images"></div>
+          <button
+            class="control-button prev-button bigScreen"
+            onclick="prevSlide()"
+          >
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <button
+            class="control-button next-button bigScreen"
+            onclick="nextSlide()"
+          >
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="selectImage">
+          <div class="all-images"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <i class="title">Book us now</i>
+        <div class="footernave">
+          <i class="fa fa-instagram" style="font-size: 22px"></i>
+          <i class="fa fa-facebook" style="font-size: 22px"></i>
+        </div>
+        <p>Made with love, in India</p>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="./pages/my-story/my-store.html">Book us now</a></li>
+          <li><a href="#">Stories for Brands</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/middleSidebar.js"></script>
+  <script src="./js/sidebar.js"></script>
+  <script src="./js/search.js"></script>
+
+  <script>
+    const closeIconsSearch = document.querySelectorAll(".seachClose");
+    closeIconsSearch.forEach((icon) => (icon.style.display = "none"));
+    // search system
+    function search(event) {
+      event.preventDefault();
+      const searchTerm = document.getElementById("searchInput").value;
+      var url = "./pages/search/search.html?q=" + searchTerm;
+      window.location.href = url;
+    }
+
+    document
+      .getElementById("searchInput")
+      .addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          search(e);
+        }
+      });
+  </script>
+
+  <script>
+    const closeIcons = document.querySelectorAll(".faclose");
+    closeIcons.forEach((icon) => (icon.style.display = "none"));
+    const closeIconsmiddle = document.querySelectorAll(".closeMiddleSection");
+    closeIconsmiddle.forEach((icon) => (icon.style.display = "none"));
+
+    const carouselContainer = document.querySelector(".carousel-images");
+    crousalImage.forEach((imageUrl, index) => {
+      const imgElement = document.createElement("img");
+      imgElement.src = imageUrl;
+      imgElement.alt = `Image ${index + 1}`;
+      imgElement.classList.add("carousel-image");
+      carouselContainer.appendChild(imgElement);
+    });
+
+    const allImagesContainer = document.querySelector(".all-images");
+    allImagesContainer.innerHTML = "";
+
+    crousalImage.forEach((imageUrl, index) => {
+      const imgElement = document.createElement("img");
+      imgElement.src = imageUrl;
+      imgElement.alt = `Image ${index + 1}`;
+      imgElement.classList.add("active-image");
+      imgElement.onclick = function () {
+        showSelectedImage(index);
+      };
+      allImagesContainer.appendChild(imgElement);
+    });
+
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".carousel-image");
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      const images = allImagesContainer.getElementsByTagName("img");
+      for (let i = 0; i < totalSlides; i++) {
+        if (i === index) {
+          slides[i].style.display = "block";
+        } else {
+          slides[i].style.display = "none";
+        }
+      }
+
+      for (let j = 0; j < images.length; j++) {
+        images[j].classList.remove("active-image");
+      }
+
+      if (images[index]) {
+        images[index].classList.add("active-image");
+      }
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function showSelectedImage(index) {
+      currentIndex = index;
+      showSlide(currentIndex);
+    }
+
+    function autoSlide() {
+      intervalId = setInterval(() => {
+        nextSlide();
+      }, 2000);
+    }
+
+    autoSlide();
+
+    const carouselContainerDiv = document.querySelector(".carousel-container");
+    carouselContainerDiv.addEventListener("mouseenter", () => {
+      clearInterval(intervalId);
+    });
+
+    carouselContainerDiv.addEventListener("mouseleave", () => {
+      autoSlide();
+    });
+
+    showSlide(currentIndex);
+  </script>
+</html>
