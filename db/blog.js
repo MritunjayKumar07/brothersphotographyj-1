@@ -50,7 +50,7 @@ const blogData = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     title: "Naina + Shubham: Go Goa Gone",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate iusto velit aperiam numquam excepturi nobis placeat laborum obcaecati fugit, porro voluptatibus qui eligendi vero nostrum amet nesciunt ut facere ab distinctio hic neque! Voluptate aperiam saepe quis voluptatem accusamus inventore expedita quae repudiandae error dolores eaque neque, molestiae consequuntur quod! Nihil quae iste blanditiis. Accusamus ut modi fuga voluptatem consequuntur repudiandae optio ipsam quisquam soluta error amet tenetur nesciunt vitae voluptatibus, obcaecati incidunt facilis, accusantium quia. Assumenda, corrupti eum.",
@@ -68,7 +68,7 @@ const blogData = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     title: "Spardha + Ashish: Bubbles weds Trouble",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate iusto velit aperiam numquam excepturi nobis placeat laborum obcaecati fugit, porro voluptatibus qui eligendi vero nostrum amet nesciunt ut facere ab distinctio hic neque! Voluptate aperiam saepe quis voluptatem accusamus inventore expedita quae repudiandae error dolores eaque neque, molestiae consequuntur quod! Nihil quae iste blanditiis. Accusamus ut modi fuga voluptatem consequuntur repudiandae optio ipsam quisquam soluta error amet tenetur nesciunt vitae voluptatibus, obcaecati incidunt facilis, accusantium quia. Assumenda, corrupti eum.",
@@ -84,7 +84,7 @@ const blogData = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     title: "Naina + Shubham: Go Goa Gone",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate iusto velit aperiam numquam excepturi nobis placeat laborum obcaecati fugit, porro voluptatibus qui eligendi vero nostrum amet nesciunt ut facere ab distinctio hic neque! Voluptate aperiam saepe quis voluptatem accusamus inventore expedita quae repudiandae error dolores eaque neque, molestiae consequuntur quod! Nihil quae iste blanditiis. Accusamus ut modi fuga voluptatem consequuntur repudiandae optio ipsam quisquam soluta error amet tenetur nesciunt vitae voluptatibus, obcaecati incidunt facilis, accusantium quia. Assumenda, corrupti eum.",

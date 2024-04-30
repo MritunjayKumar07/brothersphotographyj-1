@@ -1,6 +1,5 @@
 
 //Show blog page
-
 const postId = window.location.href.split("=")[1];
 
 const selectItem = blogData[postId - 1];

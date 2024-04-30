@@ -206,6 +206,7 @@ main {
 .content-section h2 {
   font-weight: 400;
   margin-bottom: 15px;
+  color: #000;
 }
 
 .content-section .right-hand-side .most-recent-post .recent-post img {
