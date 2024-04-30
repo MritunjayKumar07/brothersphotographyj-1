@@ -54,14 +54,14 @@ blogData.slice(0, 3).forEach((item) => {
 const mostrecentpost = document.getElementById("recentpost");
 const lastItem = blogData[blogData.length - 1];
 
-const component_recent_post = `<div class="recent-post">
+const component_recent_post = `<a href="./showblog.html?par=${lastItem.id}" class="recent-post">
               <img
                 src=${lastItem.images[0]}
                 alt=""
               />
               <h2>${lastItem.title}</h2>
               <span>${lastItem.releaseDate}</span>
-            </div>`;
+            </a>`;
 
 mostrecentpost.innerHTML += component_recent_post + "\n";
 
