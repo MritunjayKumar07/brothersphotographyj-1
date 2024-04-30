@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap");
 #main-section {
   position: relative;
-  display: flex;
   flex-direction: column;
-  margin-top: 150px !important;
+  margin-top: 20px !important;
   width: 100%;
   height: 100%;
   display: flex;

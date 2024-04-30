@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/index.css" />
     <link rel="stylesheet" type="text/css" href="./blog.css" />
     <script src="../../db/blog.js"></script>
-    <title>Blog</title>
+    <title>Show Blog Post</title>
   </head>
   <body>
     <!-- Header -->
@@ -51,7 +51,6 @@
         </div>
       </header>
     </div>
-    <!-- Menu -->
     <nav class="menu openClose">
       <div class="site-profile">
         <i
@@ -140,10 +139,14 @@
     </nav>
     <nav class="smallScreen-search-page">
       <form class="inner" onsubmit="search(event)">
-        <input type="text" id="searchInput" placeholder="Search..." autocomplete="off"/>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search..."
+          autocomplete="off"
+        />
       </form>
     </nav>
-
     <nav class="smallScreen-middle-menu middleSectionSmallScreen">
       <div class="inner">
         <div class="profile-pic">
@@ -161,11 +164,61 @@
     </nav>
 
     <!-- Header end -->
-    <!-- main section -->
-    <main>
-      <div class="inner-blog" id="inner"></div>
+
+    <!-- main -->
+    <main id="main-section">
+      <div id="blog-banner-section"></div>
+      <div class="content-section">
+        <div class="lef-thand-side">
+          <div id="blog-p-image"></div>
+          <div class="blog-socel-info">
+            <p class="name">Nitika Bhasin</p>
+            <div class="icons-socel-midia-blog">
+              <i class="fa fa-instagram" style="font-size: 22px"></i>
+              <i class="fa fa-facebook" style="font-size: 22px"></i>
+            </div>
+          </div>
+        </div>
+        <div class="right-hand-side">
+          <iframe
+            name="f9a3bd2660717265c"
+            width="1000px"
+            height="1000px"
+            data-testid="fb:page Facebook Social Plugin"
+            title="fb:page Facebook Social Plugin"
+            frameborder="0"
+            allowtransparency="true"
+            allowfullscreen="true"
+            scrolling="no"
+            allow="encrypted-media"
+            src="https://www.facebook.com/v2.8/plugins/page.php?adapt_container_width=false&amp;app_id=218016684927579&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df32deec17b0b7990b%26domain%3Dstories.josephradhik.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fstories.josephradhik.com%252Ff997f72772f2ef1bc%26relation%3Dparent.parent&amp;container_width=230&amp;hide_cover=true&amp;href=https%3A%2F%2Fwww.facebook.com%2Fstoriesbyjosephradhik%2Fvents&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=timeline"
+            style="
+              border: none;
+              visibility: visible;
+              width: 340px;
+              height: 499px;
+            "
+            class=""
+          ></iframe>
+          <div class="most-recent-post">
+            <h2>Most Recent Post</h2>
+            <div id="recentpost"></div>
+          </div>
+          <div class="instagra-blog" id="instagram-blog"></div>
+        </div>
+      </div>
+      <div class="relative-blog">
+        <h2>Related Posts</h2>
+        <div class="inner-blog" id="inner"></div>
+      </div>
+      <div id="prev-next">
+        <div id="prev"></div>
+        <div id="next"></div>
+      </div>
+      <div id="scrolcounter"></div>
     </main>
-    <!-- main section end -->
+    <!-- main end -->
+
     <!-- Footer -->
     <footer style="margin-top: 80px">
       <div>
@@ -183,33 +236,10 @@
       </div>
     </footer>
     <!-- End Footer -->
-
     <script src="../../js/middleSidebar.js"></script>
     <script src="../../js/sidebar.js"></script>
     <script src="./blog.js"></script>
     <script src="../../js/search.js"></script>
-    <script>
-      const blogPostsContainer = document.getElementById("inner");
-
-      blogData.forEach((item) => {
-        console.log(item);
-        const component = `<div class="blog">
-          <a href="./showblog.html?par=${item.id}" class="img">
-            <img
-              src=${item.images[0]}
-              alt=""
-              width="280px"
-              height="350px"
-            />
-          </a>
-          <a href="./showblog.html?par=${item.id}" class="content">
-            <span>${item.releaseDate}</span>
-            <h2>${item.title}</h2>
-          </a>
-        </div>
-      </div>`;
-        blogPostsContainer.innerHTML += component + "\n";
-      });
-    </script>
+    <script src="./showblog.js"></script>
   </body>
 </html>
