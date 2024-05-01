@@ -1,4 +1,3 @@
-
 //Show blog page
 const postId = window.location.href.split("=")[1];
 
@@ -129,3 +128,16 @@ if (postId != 1) {
           </a>`;
   prevButton.innerHTML = prevcode;
 }
+
+// window.addEventListener("scroll", function () {
+//   var scrollBox = document.getElementById("scrollBox");
+//   var scrollPosition = window.scrollY;
+//   var opacity =
+//     scrollPosition /
+//     (document.documentElement.scrollHeight - window.innerHeight);
+//   console.log("-----------------------------------");
+//   console.log("1", document.documentElement.scrollHeight);
+//   console.log("2", window.innerHeight);
+//   console.log("3", opacity);
+
+// });

@@ -320,11 +320,63 @@ title {
   font-weight: 700;
 }
 
+#scrolcounter {
+  z-index: 99999;
+  position: fixed;
+  bottom: 8%;
+  left: 3%;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
-  #prev-next{
+  #prev-next {
     display: none;
   }
-  #main-section h1{
+  #main-section h1 {
     font-size: 32px;
   }
 }
+
+/* #scrolcounter .fill-coller {
+  position: relative;
+  top: 0;
+  left: 50%;
+  background: #fd9165;
+  width: 1%;
+  height: 100%;
+} */
+
+/* #scrolcounter .fill-coller {
+  position: relative;
+  top: 0;
+  left: 50%;
+  height: 50%;
+  background: #fd9165;
+  width: 30%;
+  border-radius: 0 0 80% 0;
+} */
+
+/* #scrolcounter .fill-coller {
+  position: relative;
+  top: 0;
+  left: 50%;
+  height: 50%;
+  background: #fd9165;
+  width: 100%;
+  border-radius: 0 0 0 0;
+} */
+
+/* #scrolcounter .fill-coller {
+  position: relative;
+  top: 0;
+  left: 50%;
+  height: 50%;
+  background: #fd9165;
+  width: 200%;
+  border-radius: 0 0 100% 0;
+} */
+

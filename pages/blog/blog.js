@@ -19,3 +19,26 @@ document
       search(e);
     }
   });
+
+// Blog show
+const blogPostsContainer = document.getElementById("inner");
+
+blogData.forEach((item) => {
+  console.log(item);
+  const component = `<div class="blog">
+          <a href="./showblog.html?par=${item.id}" class="img">
+            <img
+              src=${item.images[0]}
+              alt=""
+              width="280px"
+              height="350px"
+            />
+          </a>
+          <a href="./showblog.html?par=${item.id}" class="content">
+            <span>${item.releaseDate}</span>
+            <h2>${item.title}</h2>
+          </a>
+        </div>
+      </div>`;
+  blogPostsContainer.innerHTML += component + "\n";
+});
