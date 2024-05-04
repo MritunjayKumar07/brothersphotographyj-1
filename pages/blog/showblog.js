@@ -1,3 +1,10 @@
+const closeIcons = document.querySelectorAll(".faclose");
+closeIcons.forEach((icon) => (icon.style.display = "none"));
+const closeIconsmiddle = document.querySelectorAll(".closeMiddleSection");
+closeIconsmiddle.forEach((icon) => (icon.style.display = "none"));
+const closeIconsSearch = document.querySelectorAll(".seachClose");
+closeIconsSearch.forEach((icon) => (icon.style.display = "none"));
+
 //Show blog page
 const postId = window.location.href.split("=")[1];
 
