@@ -129,3 +129,54 @@ span {
     min-width: auto;
   }
 }
+
+/* Next page of Booking Page */
+.next-page-booking {
+  font-family: Palatino Linotype;
+  font-style: normal;
+  font-weight: normal;
+}
+.next-page-booking h1 {
+  font-size: 280% !important;
+  font-family: Palatino Linotype;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.next-page-booking h2 {
+  font-size: 240% !important;
+  font-family: Palatino Linotype;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.next-page-booking ol{
+  line-height: 20px;
+}
+.next-page-booking li{
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .next-page-booking {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .next-page-booking h1 {
+    font-size: 180% !important;
+    font-family: Palatino Linotype;
+    font-style: normal;
+    font-weight: normal;
+  }
+  .next-page-booking textarea {
+    min-width: 100% !important;
+  }
+  
+  .next-page-booking h2 {
+    font-size: 140% !important;
+    font-family: Palatino Linotype;
+    font-style: normal;
+    font-weight: normal;
+  }
+}

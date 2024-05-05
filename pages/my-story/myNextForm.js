@@ -6,33 +6,6 @@ function toggleBackground(element) {
   element.classList.add("clicked");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("myForm");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    getAllFormValues();
-  });
-});
-
-function getAllFormValues() {
-  var form = document.getElementById("myForm");
-  var formData = {};
-
-  for (var i = 0; i < form.elements.length; i++) {
-    var element = form.elements[i];
-    if (
-      element.tagName === "INPUT" ||
-      element.tagName === "TEXTAREA" ||
-      element.tagName === "SELECT"
-    ) {
-      formData[element.id] = element.value;
-    }
-  }
-  localStorage.setItem("myForm", JSON.stringify(formData));
-  console.log(formData);
-  window.location.href = "../../pages/my-story/next-my-store.html";
-}
-
 const closeIcons = document.querySelectorAll(".faclose");
 closeIcons.forEach((icon) => (icon.style.display = "none"));
 const closeIconsmiddle = document.querySelectorAll(".closeMiddleSection");
@@ -54,3 +27,22 @@ document
       search(e);
     }
   });
+
+
+//Get form data
+const form = document.getElementById("myFormNext");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  const formDataJSON = {};
+  formData.forEach((value, key) => {
+    formDataJSON[key] = value;
+  });
+
+  localStorage.setItem("myFormNext", JSON.stringify(formDataJSON));
+  alert(`Thankyou to contact us. We contact you soon.`);
+  window.location.href = "../home/home.html";
+});
