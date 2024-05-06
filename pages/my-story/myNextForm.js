@@ -28,6 +28,21 @@ document
     }
   });
 
+//Send mail:-
+function sendMail() {
+  var myForm = localStorage.getItem("myForm");
+  var myFormNext = localStorage.getItem("myFormNext");
+  // myForm = JSON.parse(myForm);
+  // myFormNext = JSON.parse(myFormNext);
+  // console.log(myForm, myFormNext);
+  let parms = {
+    site_name: "Brothers Photography",
+    message: `${myForm}${myFormNext}`,
+  };
+  emailjs
+    .send("your_service_id", "your_template_id", parms)
+    .then(alert(`Thankyou to contact us. We contact you soon!!`));
+}
 
 //Get form data
 const form = document.getElementById("myFormNext");
@@ -43,6 +58,6 @@ form.addEventListener("submit", function (event) {
   });
 
   localStorage.setItem("myFormNext", JSON.stringify(formDataJSON));
-  alert(`Thankyou to contact us. We contact you soon.`);
-  window.location.href = "../home/home.html";
+  sendMail();
+  // window.location.href = "../home/home.html";
 });
