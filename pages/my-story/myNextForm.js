@@ -40,7 +40,7 @@ function sendMail() {
     message: `${myForm}${myFormNext}`,
   };
   emailjs
-    .send("your_service_id", "your_template_id", parms)
+    .send("service_qjm4v1p", "template_uumq8ix", parms)
     .then(alert(`Thankyou to contact us. We contact you soon!!`));
 }
 

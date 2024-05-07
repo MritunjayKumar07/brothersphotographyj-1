@@ -14,8 +14,20 @@ const header_component = `<header>
 </div>
 <div class="user-info">
   <nav class="social-icon">
-    <i class="fa fa-instagram" style="font-size: 22px"></i>
-    <i class="fa fa-facebook" style="font-size: 22px"></i>
+   <div class="social-media-links">
+          <a href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+            class="social-link instagram" style="margin-right: 10px; font-size: 26px;">
+            <i class="fa fa-instagram" style="color: black;"></i>
+          </a>
+          <a href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d" class="social-link facebook"
+            style="margin-right: 10px; font-size: 26px">
+            <i class="fa fa-facebook" style="color: black;"></i>
+          </a>
+          <a href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT" class="social-link youtube"
+            style="margin-right: 10px; font-size: 26px">
+            <i class="fa fa-youtube" style="color: black;"></i>
+          </a>
+        </div>
   </nav>
   <div style="margin: auto">
     <i
@@ -56,8 +68,7 @@ const header_component1 = `<div class="site-profile">
       ><span>Book us now:)</span></a
     >
   </li>
-  <li><span>Portrait Shoots</span></li>
-  <li><span>Stories for brands</span></li>
+
 </ul>
 <div class="imageList">
   <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
@@ -68,20 +79,22 @@ const header_component1 = `<div class="site-profile">
       alt=""
       width="200px"
     />
-    <img
-      src="../../images/recently-on-instagram/2.jpg"
-      alt=""
-      width="200px"
-    />
-    <img
-      src="../../images/recently-on-instagram/3.jpg"
-      alt=""
-      width="200px"
-    />
   </div>
   <div class="smallScreen-socel-icon">
-    <i class="fa fa-instagram" style="font-size: 22px"></i>
-    <i class="fa fa-facebook" style="font-size: 22px"></i>
+  <div class="social-media-links">
+  <a href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+    class="social-link instagram" style="margin-right: 10px; font-size: 26px;">
+    <i class="fa fa-instagram" style="color: black;"></i>
+  </a>
+  <a href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d" class="social-link facebook"
+    style="margin-right: 10px; font-size: 26px">
+    <i class="fa fa-facebook" style="color: black;"></i>
+  </a>
+  <a href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT" class="social-link youtube"
+    style="margin-right: 10px; font-size: 26px">
+    <i class="fa fa-youtube" style="color: black;"></i>
+  </a>
+</div>
   </div>
 </div>
 </div>`;
@@ -141,8 +154,20 @@ const header_component4 = `<div class="inner">
   <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
 </div>
 <div class="image">
-  <i class="fa fa-instagram" style="font-size: 52px"></i>
-  <i class="fa fa-facebook" style="font-size: 52px"></i>
+   <div class="social-media-links">
+        <a href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+          class="social-link instagram" style="margin-right: 10px; font-size: 26px;">
+          <i class="fa fa-instagram" style="color: black;"></i>
+        </a>
+        <a href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d" class="social-link facebook"
+          style="margin-right: 10px; font-size: 26px">
+          <i class="fa fa-facebook" style="color: black;"></i>
+        </a>
+        <a href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT" class="social-link youtube"
+          style="margin-right: 10px; font-size: 26px">
+          <i class="fa fa-youtube" style="color: black;"></i>
+        </a>
+      </div>
 </div>
 </div>`;
 

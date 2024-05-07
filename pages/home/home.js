@@ -125,3 +125,5 @@ blogData.forEach((item) => {
       </div>`;
   blogPostsContainer.innerHTML += component + "\n";
 });
+
+

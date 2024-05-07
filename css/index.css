@@ -165,18 +165,19 @@ main{
 }
 
 .carousel-image {
-  width: 85%;
-  max-width: 100%;
-  height: 80vh;
+  width: 700px; /* Adjust width as needed */
+  height: 800px; /* Adjust height as needed to maintain aspect ratio */
   object-fit: cover;
   margin: 0 auto;
   transition: transform 0.5s ease;
   border-radius: 4px;
-}
-
-.carousel-image img{
-  /* height: 150px; */
-}
+ }
+ 
+ .carousel-image img {
+  width: 700px; /* Adjust width as needed */
+  height: 800px;/* Adjust the height automatically to maintain aspect ratio */
+ }
+ 
 .control-button {
   cursor: pointer;
   position: absolute;
