@@ -151,7 +151,7 @@ const header4 = document.getElementById("headerSection4");
 
 const header_component4 = `<div class="inner">
 <div class="profile-pic">
-  <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
+  <img src="../../images/logo/logo.png" alt="Logo" width="120px style="opacity: 0.5;" />
 </div>
 <div class="image">
    <div class="social-media-links">
