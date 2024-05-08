@@ -21,9 +21,6 @@ const banner_selectBlogPage = `
     <h1>${selectItem.title}</h1>`;
 
 const blog_p_images = `
-    <p>
-        A story shot by Joseph Radhik, Shivali Chopra, Mohamed Jameer and Oscar Varghese celebrating the love of Saanchi & Shahaan.
-    </p>
     <section class="blog-img-section">
         ${selectItem.images
           .map((image) => `<img src="${image}" alt="" />`)
