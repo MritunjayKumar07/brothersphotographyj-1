@@ -107,6 +107,25 @@ main {
   height: 100%;
 }
 
+@media (max-width: 900px) {
+  #main-section .banner-section {
+    height: 400px;
+  }
+  
+  #main-section .banner-section img {
+    width: 85%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-section .banner-section {
+    height: 300px;
+  }
+}
+
 #main-section .content-section {
   width: 85%;
   padding-top: 5%;
