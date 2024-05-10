@@ -114,7 +114,7 @@ main {
   
   #main-section .banner-section img {
     width: 85%;
-    height: 100%;
+    height: 400px;
     display: block;
     object-fit: cover;
   }
@@ -122,6 +122,9 @@ main {
 
 @media (max-width: 768px) {
   #main-section .banner-section {
+    height: 300px;
+  }
+  #main-section .banner-section img{
     height: 300px;
   }
 }
