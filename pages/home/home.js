@@ -110,7 +110,6 @@ showSlide(currentIndex);
 const blogPostsContainer = document.getElementById("inner-card-home");
 
 blogData.forEach((item) => {
-  console.log(item);
   const component = `<div class="blog">
           <a href="../blog/showblog.html?par=${item.id}" class="img">
             <img
