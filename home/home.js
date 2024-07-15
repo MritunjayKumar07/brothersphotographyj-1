@@ -17,18 +17,30 @@ document
     }
   });
 
-//   Navebar
+//Navebar
 const closeIcons = document.querySelectorAll(".faclose");
 closeIcons.forEach((icon) => (icon.style.display = "none"));
 const closeIconsmiddle = document.querySelectorAll(".closeMiddleSection");
 closeIconsmiddle.forEach((icon) => (icon.style.display = "none"));
 
+//Crousal:
 const carouselContainer = document.querySelector(".carousel-images");
+
 crousalImage.forEach((imageUrl, index) => {
   const imgElement = document.createElement("img");
   imgElement.src = imageUrl;
+  // imgElement.
   imgElement.alt = `Image ${index + 1}`;
   imgElement.classList.add("carousel-image");
+
+  // Add the required attributes
+  imgElement.setAttribute("elementtiming", "system-gallery-block-grid");
+  imgElement.setAttribute("data-src", imageUrl);
+  imgElement.setAttribute("data-image", imageUrl);
+  imgElement.setAttribute("data-image-dimensions", "405x525");
+  imgElement.setAttribute("data-image-focal-point", "0.5,0.5");
+  imgElement.setAttribute("data-load", "false");
+  imgElement.setAttribute("data-type", "image");
   carouselContainer.appendChild(imgElement);
 });
 
@@ -103,26 +115,60 @@ carouselContainerDiv.addEventListener("mouseleave", () => {
 
 showSlide(currentIndex);
 
-
-
-
 // Blog show
 const blogPostsContainer = document.getElementById("inner-card-home");
 
 blogData.forEach((item) => {
   const component = `<div class="blog">
-          <a href="../blog/showblog.html?par=${item.id}" class="img">
+          <a href="../blog/?${item.title}" class="img">
             <img
               src=${item.images[0]}
               alt=""
             />
           </a>
-          <a href="../blog/showblog.html?par=${item.id}" class="content">
-            <h2>${item.title}</h2>
+          <a href="../blog/?${item.title}" class="content">
+            <h2 class="content">${item.title}</h2>
           </a>
         </div>
       </div>`;
   blogPostsContainer.innerHTML += component + "\n";
 });
 
+// Featured on Netflix cards
 
+const FeaturedOnNetflix = document.getElementById(
+  "featured-section-first-cards"
+);
+
+FeaturedOnNetflixData.forEach((item) => {
+  const component = `<div data-type="image" data-animation-role="image">
+            <div class="margin-wrapper">
+              <a role="presentation" class="image-slide-anchor content-fit">
+                <noscript>
+                  <img src="${item.image}" alt="${item.alter}" />
+                </noscript>
+                <img
+                  elementtiming="system-gallery-block-grid"
+                  data-src="${item.image}"
+                  data-image="${item.image}"
+                  data-image-dimensions="405x525"
+                  data-image-focal-point="0.5,0.5"
+                  data-load="false"
+                  data-type="image"
+                  style="
+                    left: 0px;
+                    top: 12.537px;
+                    width: 128px;
+                    height: 165.926px;
+                    position: relative;
+                  "
+                  data-parent-ratio="0.7"
+                  alt="${item.alter}"
+                  data-image-resolution="300w"
+                  src="${item.image}?format=300w"
+                />
+              </a>
+            </div>
+          </div>`;
+  FeaturedOnNetflix.innerHTML += component + "\n";
+});

@@ -7,6 +7,13 @@ html {
   box-sizing: border-box;
   background: #ffffff;
   font-family: "Noto Serif", serif;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* overflow: hidden; */
+}
+main {
+  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -43,8 +50,8 @@ header {
   padding-right: 8%;
   z-index: 1099;
   opacity: 1;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -145,6 +152,7 @@ header a {
 @media (max-width: 768px) {
   .smallScreen-menu {
     display: flex;
+    /* width: 100vw; */
   }
 }
 
@@ -163,12 +171,12 @@ main {
 }
 
 .carousel-image {
-  max-height: 80vh;
   width: 85vw;
-  min-height: 70vh;
+  height: 100vh;
   margin: 0 auto;
   transition: transform 0.5s ease;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .carousel-image img {
@@ -177,7 +185,7 @@ main {
   display: block;
   object-fit: cover;
 }
-@media (max-width: 1800px) {
+/* @media (max-width: 1800px) {
   .carousel-image {
     min-width: 85vw;
     min-height: 50vh;
@@ -189,7 +197,7 @@ main {
     min-height: 30vh;
     max-height: 30vh;
   }
-}
+} */
 
 @media (max-width: 600px) {
   .carousel-image {
@@ -394,8 +402,8 @@ footer ul li a {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: -70%;
-  width: 70%;
+  margin-left: -100%;
+  width: 100%;
   height: 100vh;
   transition: margin-left 1s;
 }
@@ -405,10 +413,14 @@ footer ul li a {
     margin-left: -100%;
     padding: 20px;
     width: 100%;
+    padding-top: 10rem;
   }
 }
 
 .menu i {
+  position: absolute;
+  top: -7rem;
+  left: -1.8rem;
   cursor: pointer;
   width: 36px;
   height: 36px;

@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="stylesheet" type="text/css" href="./my-store.css" />
     <title>my-store</title>
   </head>
@@ -27,7 +27,7 @@
 
     <!-- main section -->
     <main id="main-section">
-      <img src="../../images/my-store/banner.JPG" alt="banner" />
+      <img src="../images/my-store/banner.JPG" alt="banner" />
       <section id="content-section">
         <div class="form-container">
           <hr />
@@ -55,153 +55,101 @@
           <hr />
           <h2>Tell us about yourself</h2>
           <form id="myForm">
-            <div
-              class="form-group"
-              onclick="toggleBackground(this)"
-              id="hover-message1"
-            >
+            <div class="form-group" onclick="toggleBackground(this)" id="hover-message1">
               <div>
-                <label for="name">Your name <span>*</span></label
-                ><br />
-                <input type="text" id="name" required />
+                <label for="name">Your name <span>*</span></label><br />
+                <input type="text" name="name" id="name" required />
               </div>
             </div>
-
+        
             <div class="form-group" onclick="toggleBackground(this)">
               <div>
-                <label for="email">Email <span>*</span></label
-                ><br />
-                <input type="email" id="email" required />
+                <label for="email">Email <span>*</span></label><br />
+                <input type="email" name="email" id="email" required />
               </div>
               <div class="message-box">
                 <p>We'll mail your quote to this address</p>
               </div>
             </div>
+            
             <div class="form-group" onclick="toggleBackground(this)">
               <div>
-                <label for="phone">Phone Number <span>*</span></label
-                ><br />
-                <input type="tel" id="phone" required />
+                <label for="phone">Phone Number <span>*</span></label><br />
+                <input type="tel" name="phone" id="phone" required />
               </div>
               <div class="message-box">
-                <p>
-                  This is required. In many cases, you'll get a call from us to
-                  say hello :)
-                </p>
+                <p>This is required. In many cases, you'll get a call from us to say hello :)</p>
               </div>
             </div>
+            
             <div class="form-group" onclick="toggleBackground(this)">
               <div>
-                <label for="phone-country"
-                  >Country and area code of your phone number
-                  <span>*</span></label
-                ><br />
-                <input type="text" id="phone-country" required />
+                <label for="phone-country">Country and area code of your phone number <span>*</span></label><br />
+                <input type="text" name="country_phone" id="phone-country" required />
               </div>
               <div class="message-box">
                 <p>Ex: +91 for India</p>
               </div>
             </div>
+            
             <div class="form-group" onclick="toggleBackground(this)">
               <div>
-                <label for="how-heard"
-                  >How did you hear of us? Have you seen our work at a friend's
-                  wedding?</label
-                ><br />
-                <textarea id="how-heard"></textarea>
+                <label for="hear_from">How did you hear of us? Have you seen our work at a friend's wedding?</label><br />
+                <textarea id="hear_from" name="hear_from"></textarea>
               </div>
             </div>
-            <div class="form-group" onclick="toggleBackground(this)">
+            
+            <div class="form-group">
               <div>
-                <label for="see-work"
-                  >Where did you see our work most recently?
-                  <span>*</span></label
-                ><br />
-                <input
-                  type="radio"
-                  id="facebook"
-                  name="see-work"
-                  value="facebook"
-                  required
-                />
+                <label for="see-work">Where did you see our work most recently? <span>*</span></label><br />
+        
+                <input type="radio" id="facebook" name="see-work" value="facebook" required />
                 <label for="facebook">Facebook</label><br />
-                <input
-                  type="radio"
-                  id="blog-press"
-                  name="see-work"
-                  value="blog-press"
-                  required
-                />
+        
+                <input type="radio" id="blog-press" name="see-work" value="blog-press" required />
                 <label for="blog-press">On a blog, or in the press</label><br />
-                <input
-                  type="radio"
-                  id="friend-wedding"
-                  name="see-work"
-                  value="friend-wedding"
-                  required
-                />
+        
+                <input type="radio" id="friend-wedding" name="see-work" value="friend-wedding" required />
                 <label for="friend-wedding">Friend's wedding</label><br />
-                <input
-                  type="radio"
-                  id="instagram"
-                  name="see-work"
-                  value="instagram"
-                  required
-                />
+        
+                <input type="radio" id="instagram" name="see-work" value="instagram" required />
                 <label for="instagram">Instagram</label><br />
-                <input
-                  type="radio"
-                  id="other"
-                  name="see-work"
-                  value="other"
-                  required
-                />
+        
+                <input type="radio" id="other" name="see-work" value="other" required />
                 <label for="other">Other</label><br />
-                <input
-                  type="text"
-                  id="other-work"
-                  placeholder="Please specify"
-                  width="50%"
-                />
+        
+                <input type="text" id="other-work" name="see-work-other" placeholder="Please specify" style="display: none;" />
               </div>
             </div>
-
+        
             <div class="form-group" onclick="toggleBackground(this)">
               <div>
-                <label for="event-location"
-                  >Which city/country is the shoot in? <span>*</span></label
-                ><br />
-                <input type="text" id="event-location" required />
+                <label for="event-location">Which city/country is the shoot in? <span>*</span></label><br />
+                <input type="text" name="event_location" id="event-location" required />
               </div>
               <div class="message-box">
                 <p>Please note that we do not shoot in the USA</p>
               </div>
             </div>
+        
             <div class="form-group" onclick="toggleBackground(this)">
               <div>
-                <label for="event-type"
-                  >What event do you want to invite us to? <span>*</span></label
-                ><br />
-                <select id="event-type" required>
-                  <option></option>
-                  <option value="Wedding" required>Wedding</option>
-                  <option value="Lifestyle" required>
-                    Lifestyle event (Parties/Other celebrations)
-                  </option>
-                  <option value="Brands" required>
-                    Stories for brands (Events/Product shoots/Films)
-                  </option>
+                <label for="event-type">What event do you want to invite us to? <span>*</span></label><br />
+                <select id="event-type" name="event_type" required>
+                  <option value=""></option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Lifestyle event (Parties/Other celebrations)">Lifestyle event (Parties/Other celebrations)</option>
+                  <option value="Stories for brands (Events/Product shoots/Films)">Stories for brands (Events/Product shoots/Films)</option>
                 </select>
+        
                 <div class="message-box">
                   <p>We'll mail your quote to this address</p>
                 </div>
               </div>
             </div>
+            
             <div class="form-group">
-              <input
-                type="submit"
-                value="Next Page (Only three more questions to go!)"
-              />
+              <input type="submit" value="Next Page (Only three more questions to go!)" />
             </div>
           </form>
         </div>
@@ -213,12 +161,12 @@
     <footer id="footer"></footer>
     <!-- End Footer -->
 
-    <script src="../../js/components/header.js"></script>
-    <script src="../../js/components/footer.js"></script>
-    <script src="../../js/middleSidebar.js"></script>
-    <script src="../../js/sidebar.js"></script>
-    <script src="../../js/search.js"></script>
+    <script src="../js/components/header.js"></script>
+    <script src="../js/components/footer.js"></script>
+    <script src="../js/middleSidebar.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/search.js"></script>
     <script src="./my-store.js"></script>
-    <script src="../../pages/my-story/next-my-store.html"></script>
+    <!-- <script src="../my-story/next-my-store.html"></script> -->
   </body>
 </html>

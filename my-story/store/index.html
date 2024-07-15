@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../my-store.css" />
+
+    <!-- Send mail -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "v2SylJUD5VLTuDNLA",
+        });
+      })();
+    </script>
+    <title>my-store</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div id="headerSection">
+      <header>
+        <a href="#">
+          <i
+            class="fa fa-bars"
+            onclick="menuOpen()"
+            style="font-size: 22px"
+          ></i>
+        </a>
+        <div class="logo-branding">
+          <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
+        </div>
+        <div class="user-info">
+          <nav class="social-icon">
+            <div class="social-media-links">
+              <a
+                href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+                class="social-link instagram"
+                style="margin-right: 10px; font-size: 26px"
+              >
+                <i class="fa fa-instagram" style="color: black"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d"
+                class="social-link facebook"
+                style="margin-right: 10px; font-size: 26px"
+              >
+                <i class="fa fa-facebook" style="color: black"></i>
+              </a>
+              <a
+                href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT"
+                class="social-link youtube"
+                style="margin-right: 10px; font-size: 26px"
+              >
+                <i class="fa fa-youtube" style="color: black"></i>
+              </a>
+            </div>
+          </nav>
+          <div style="margin: auto">
+            <i
+              class="fa fa-search search-icon searchOpen"
+              onclick="openSearch()"
+              style="font-size: 22px"
+            ></i>
+            <i
+              class="fa fa-close seachClose"
+              onclick="closeSearch()"
+              style="font-size: 22px"
+            ></i>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- Menu -->
+    <!-- 1 -->
+    <nav class="menu openClose" id="headerSection1">
+      <div class="site-profile">
+        <i
+          class="fa fa-close"
+          onclick="menuClose()"
+          style="font-size: 42px"
+        ></i>
+        <ul>
+          <li>
+            <a href="../../home" style="color: #fd9165"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="../../blog"><span>Blog</span></a>
+          </li>
+          <li>
+            <a href="../../my-story"><span>Book us now:)</span></a>
+          </li>
+        </ul>
+        <div class="imageList">
+          <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
+          <h2>Recently on instagram</h2>
+          <div class="galary">
+            <img
+              src="../../images/recently-on-instagram/1.jpg"
+              alt=""
+              width="200px"
+            />
+          </div>
+          <div class="smallScreen-socel-icon">
+            <div class="social-media-links">
+              <a
+                href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+                class="social-link instagram"
+                style="margin-right: 10px; font-size: 26px"
+              >
+                <i class="fa fa-instagram" style="color: black"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d"
+                class="social-link facebook"
+                style="margin-right: 10px; font-size: 26px"
+              >
+                <i class="fa fa-facebook" style="color: black"></i>
+              </a>
+              <a
+                href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT"
+                class="social-link youtube"
+                style="margin-right: 10px; font-size: 26px"
+              >
+                <i class="fa fa-youtube" style="color: black"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- 2 -->
+    <nav class="smallScreen-menu" id="headerSection2">
+      <a href="#" style="text-decoration: none">
+        <i
+          class="fa fa-bars fabars"
+          onclick="menuOpen()"
+          style="font-size: 22px"
+        ></i>
+        <i
+          class="fa fa-close faclose"
+          onclick="menuClose()"
+          style="font-size: 32px"
+        ></i>
+      </a>
+      <div>
+        <h1 class="openMiddleSection" onclick="menuOpenmiddle()">...</h1>
+        <h1 class="closeMiddleSection" onclick="menuClosemiddle()">
+          <i class="fa fa-close" style="font-size: 32px"></i>
+        </h1>
+      </div>
+
+      <div class="mobile-search">
+        <i
+          class="fa fa-search search-icon searchOpen"
+          onclick="openSearch()"
+          style="font-size: 22px"
+        ></i>
+        <i
+          class="fa fa-close seachClose"
+          onclick="closeSearch()"
+          style="font-size: 22px"
+        ></i>
+      </div>
+    </nav>
+    <!-- 3 -->
+    <nav class="smallScreen-search-page" id="headerSection3">
+      <form class="inner" onsubmit="search(event)">
+        <input type="text" id="searchInput" placeholder="Search..." />
+      </form>
+    </nav>
+    <!-- 4 -->
+    <nav
+      class="smallScreen-middle-menu middleSectionSmallScreen"
+      id="headerSection4"
+    >
+      <div class="inner">
+        <div class="profile-pic">
+          <img src="../../images/logo/logo.png" alt="Logo" width="120px
+          style="opacity: 0.5;" />
+        </div>
+        <div class="image">
+          <div class="social-media-links">
+            <a
+              href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+              class="social-link instagram"
+              style="margin-right: 10px; font-size: 26px"
+            >
+              <i class="fa fa-instagram" style="color: black"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d"
+              class="social-link facebook"
+              style="margin-right: 10px; font-size: 26px"
+            >
+              <i class="fa fa-facebook" style="color: black"></i>
+            </a>
+            <a
+              href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT"
+              class="social-link youtube"
+              style="margin-right: 10px; font-size: 26px"
+            >
+              <i class="fa fa-youtube" style="color: black"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- header end -->
+
+    <!-- main section -->
+    <main id="main-section" class="next-page-booking">
+      <img src="../banner.JPG" alt="banner" />
+      <section id="content-section">
+        <div class="form-container">
+          <h1>Be the star in your own story</h1>
+          <hr />
+          <h2>Oh, it's a wedding in the family!</h2>
+          <ol>
+            <li>
+              Weddings are shot by the Stories team of talented, award-winning
+              photographers
+            </li>
+            <li>Please view our <a href="#">photo showcase</a> on Instagram</li>
+            <li>
+              Photography includes getting-ready shots, behind-the-scenes, decor
+              and venue coverage, shots of guests, candid portraits of family
+              and the event
+            </li>
+            <li>
+              Travel and stay are extra. Our team is spread primarily across
+              Mumbai and Hyderabad.
+            </li>
+          </ol>
+          ----------
+          <p>
+            We work with a select set of partners for wedding films in India and
+            abroad. If you'd like us to help you with references and connects
+            with our partners, please select "Cinematography" in the options
+            below.
+          </p>
+          <hr />
+          <h2>Pricing.</h2>
+          <ol type="a">
+            <li>
+              <b>Stories Photography packages start at INR 4L per day</b> and
+              scale up based on the team size required
+            </li>
+            <li>
+              <b
+                >The partners we work with for wedding films operate within a
+                large price band, and we can help you with references and
+                connect you with them</b
+              >
+            </li>
+            <li>
+              <b
+                >All packages can be customized to suit your wedding's
+                requirements</b
+              >
+            </li>
+            <li><b>18% GST is additional</b></li>
+          </ol>
+
+          <!-- Form -->
+          <form id="myFormNext">
+            <div class="form-group" onclick="toggleBackground(this)">
+              <div>
+                <label for="see-work"
+                  >What would you like us to do for your big day?
+                  <span>*</span></label
+                ><br />
+                <input
+                  type="radio"
+                  id="wedding-photography"
+                  name="see-work"
+                  required
+                  value="wedding-photography"
+                />
+                <label for="wedding-photography">Wedding Photography</label
+                ><br />
+                <input
+                  type="radio"
+                  id="no-wedding-films"
+                  name="see-work"
+                  required
+                  value="no-wedding-films"
+                />
+                <label for="no-wedding-films"
+                  >We don't shoot wedding films</label
+                ><br />
+                <input
+                  type="radio"
+                  id="pre-wedding-shoot"
+                  name="see-work"
+                  required
+                  value="pre-wedding-shoot"
+                />
+                <label for="pre-wedding-shoot">Pre-wedding Shoot</label><br />
+              </div>
+              <div class="message-box">
+                <p>Select one option</p>
+              </div>
+            </div>
+
+            <h2>Save the date.</h2>
+            <div class="form-group" onclick="toggleBackground(this)">
+              <div>
+                <label for="event-date"
+                  ><b>Date of the wedding</b> <span>*</span></label
+                ><br />
+                <input type="date" required name="event-date" id="event-date" />
+              </div>
+            </div>
+            <h2>Events, guest count, venues.</h2>
+            <div class="form-group" onclick="toggleBackground(this)">
+              <div>
+                <label for="event-type"><b>List of events</b></label
+                ><br />
+                <textarea
+                  id="event-type"
+                  name="Events-list"
+                  rows="10"
+                  cols="50"
+                ></textarea>
+                <div class="message-box">
+                  <p>
+                    Sangeet, Haldi, Wedding, Reception, Church wedding etc. Be
+                    specific please.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="form-group" onclick="toggleBackground(this)">
+              <div>
+                <label for="guest-count"
+                  ><b
+                    >How many people will attend the wedding? (guest count at
+                    largest event)</b
+                  ></label
+                ><br />
+                <input type="text" name="guest-count" id="guest-count" />
+              </div>
+            </div>
+            <h1>You're almost done! :)</h1>
+            <p>Is there anything else we should know about your requirement?</p>
+            <div class="form-group" onclick="toggleBackground(this)">
+              <div>
+                <label for="additional-info">Any other information</label><br />
+                <input
+                  type="text"
+                  name="additional-info"
+                  id="additional-info"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Finished!" onclick="sendMail()" />
+            </div>
+          </form>
+
+          <p>
+            This site is protected by reCAPTCHA Enterprise and the Google
+            <a href="#">Privacy Policy</a> and
+            <a href="#">Terms of Service</a> apply.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- main section end -->
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div>
+        <a href="../../my-story">
+          <span><i class="title">Book us now</i></span>
+        </a>
+
+        <div class="footernave">
+          <div class="social-media-links">
+            <a
+              href="https://www.instagram.com/brothersphotographyj?igsh=MWZxeGU1N2U0ZDF0aA=="
+              class="social-link instagram"
+              style="margin-right: 10px; font-size: 26px"
+            >
+              <i class="fa fa-instagram" style="color: black"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/FUp3LXkaSpsrh2ti/?mibextid=LQQJ4d"
+              class="social-link facebook"
+              style="margin-right: 10px; font-size: 26px"
+            >
+              <i class="fa fa-facebook" style="color: black"></i>
+            </a>
+            <a
+              href="https://youtube.com/@brothersphotography4517?si=DGdJHjwSkjxOO0cT"
+              class="social-link youtube"
+              style="margin-right: 10px; font-size: 26px"
+            >
+              <i class="fa fa-youtube" style="color: black"></i>
+            </a>
+          </div>
+        </div>
+        <p>Capturing Moments, Creating Memories</p>
+        <p>&copy; 2024 Brothers Photography. All Rights Reserved. &#8482;</p>
+        <br /><br /><br /><br />
+        <br />
+        <br />
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="../../js/middleSidebar.js"></script>
+    <script src="../../js/sidebar.js"></script>
+    <script src="../../js/search.js"></script>
+    <script src="./myNextForm.js"></script>
+  </body>
+</html>

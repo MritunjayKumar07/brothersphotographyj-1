@@ -27,6 +27,8 @@
 }
 form {
   margin-bottom: 150px;
+  text-align: left;
+  align-items: left;
 }
 
 .form-container {
@@ -36,6 +38,7 @@ form {
 }
 
 .form-group {
+  justify-content:left !important;
   padding-bottom: 20px;
   padding: 10px;
   display: flex;

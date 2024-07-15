@@ -10,7 +10,7 @@ const header_component = `<header>
   ></i>
 </a>
 <div class="logo-branding">
-  <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
+  <img src="../images/logo/logo.png" alt="Logo" width="120px" />
 </div>
 <div class="user-info">
   <nav class="social-icon">
@@ -56,26 +56,26 @@ const header_component1 = `<div class="site-profile">
 ></i>
 <ul>
   <li>
-    <a href="../../pages/home/home.html" style="color: #fd9165"
+    <a href="../home" style="color: #fd9165"
       ><span>Home</span></a
     >
   </li>
   <li>
-    <a href="../../pages/blog/blog.html"><span>Blog</span></a>
+    <a href="../blog"><span>Blog</span></a>
   </li>
   <li>
-    <a href="../../pages/my-story/my-store.html"
+    <a href="../my-story"
       ><span>Book us now:)</span></a
     >
   </li>
 
 </ul>
 <div class="imageList">
-  <img src="../../images/logo/logo.png" alt="Logo" width="120px" />
+  <a href="../home"><img src="../images/logo/logo.png" alt="Logo" width="120px" /></a>
   <h2>Recently on instagram</h2>
   <div class="galary">
     <img
-      src="../../images/recently-on-instagram/1.jpg"
+      src="../images/recently-on-instagram/1.jpg"
       alt=""
       width="200px"
     />
@@ -102,7 +102,6 @@ header1.innerHTML = header_component1;
 
 //Header section 2
 const header2 = document.getElementById("headerSection2");
-
 const header_component2 = `<a href="#" style="text-decoration: none">
 <i
   class="fa fa-bars fabars"
@@ -151,7 +150,7 @@ const header4 = document.getElementById("headerSection4");
 
 const header_component4 = `<div class="inner">
 <div class="profile-pic">
-  <img src="../../images/logo/logo.png" alt="Logo" width="120px style="opacity: 0.5;" />
+  <img src="../images/logo/logo.png" alt="Logo" width="120px style="opacity: 0.5;" />
 </div>
 <div class="image">
    <div class="social-media-links">

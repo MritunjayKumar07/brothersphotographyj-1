@@ -16,7 +16,7 @@ closeIconsSearch.forEach((icon) => (icon.style.display = "none"));
 function search(event) {
   event.preventDefault();
   const searchTerm = document.getElementById("searchInput").value;
-  var url = "../../pages/search/search.html?q=" + searchTerm;
+  var url = "../../search/search.html?q=" + searchTerm;
   window.location.href = url;
 }
 
@@ -27,22 +27,6 @@ document
       search(e);
     }
   });
-
-//Send mail:-
-function sendMail() {
-  var myForm = localStorage.getItem("myForm");
-  var myFormNext = localStorage.getItem("myFormNext");
-  // myForm = JSON.parse(myForm);
-  // myFormNext = JSON.parse(myFormNext);
-  // console.log(myForm, myFormNext);
-  let parms = {
-    site_name: "Brothers Photography",
-    message: `${myForm}${myFormNext}`,
-  };
-  emailjs
-    .send("service_qjm4v1p", "template_uumq8ix", parms)
-    .then(alert(`Thankyou to contact us. We contact you soon!!`));
-}
 
 //Get form data
 const form = document.getElementById("myFormNext");
@@ -61,3 +45,50 @@ form.addEventListener("submit", function (event) {
   sendMail();
   // window.location.href = "../home/home.html";
 });
+
+function sendMail() {
+  const myForm = JSON.parse(localStorage.getItem("myForm"));
+  const myFormNext = JSON.parse(localStorage.getItem("myFormNext"));
+
+  if (!myForm || !myFormNext) {
+    alert("Form data is missing.");
+    return;
+  }
+
+  console.warn(myForm);
+  console.warn(myFormNext);
+  //Convert to table
+  function generateTable(data) {
+    let table = " ";
+    for (let key in data) {
+      if (data.hasOwnProperty(key)) {
+        table += `${key} : ${data[key]}\n`;
+      }
+    }
+    table += " ";
+    return table;
+  }
+
+  const myFormTable = generateTable(myForm);
+  const myFormNextTable = generateTable(myFormNext);
+
+  let parms = {
+    name: myForm.name,
+    email: myForm.email,
+    message: `${myFormTable}${myFormNextTable}`,
+    site_name: "brothersphotographyj.com",
+  };
+
+  /*emailjs.send(<Service Id>, <Template Id>, parms).then().catch() */
+  emailjs
+    .send("service_bwb24su", "template_vcwo115", parms)
+    .then((response) => {
+      alert("Email sent!!");
+      localStorage.removeItem("myForm");
+      localStorage.removeItem("myFormNext");
+    })
+    .catch((error) => {
+      console.error("Failed to send email:", error);
+      alert("Failed to send email. Please try again later.");
+    });
+}

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sorts+Mill+Goudy:ital@0;1&display=swap");
 #card-section,
-#featured-section {
+#featured-section,
+#featured-section-first {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -12,8 +13,48 @@
   margin-top: 80px;
   margin-bottom: 80px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+  text-align: center;
 }
 
+#featured-section-first {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#featured-section-first h1 {
+  font-weight: 500;
+}
+
+/* #featured-section-first #featured-section-first-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+} */
+#featured-section-first #featured-section-first-cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+#featured-section-first .Button {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#featured-section-first .Button a {
+  background-color: #181f67;
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 12px 19px;
+  border-radius: 3px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  cursor: pointer;
+}
 #card-section .card img {
   margin: 8px;
   margin-bottom: 50px;
@@ -54,13 +95,16 @@
   height: 400px;
 }
 
-#featured-section #inner-card-home .blog .content h2 {
+#featured-section #inner-card-home .blog .content {
   color: #000;
-  font-size: 22px;
+  font-size: 28px;
+  display: flex;
   text-align: center;
+  align-items: center;
   width: 80%;
   margin-top: 20px;
-  font-weight: 400;
+  font-weight: 600;
+  word-spacing: 1px;
   font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
 }
 
@@ -96,5 +140,29 @@
     display: flex;
     justify-content: center;
     place-items: center;
+  }
+  #featured-section-first {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 660px) {
+  #featured-section-first #featured-section-first-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  #featured-section-first-cards > div > div > a > img {
+    width: 188px !important;
+    height: 228px !important;
+  }
+}
+
+@media (max-width: 460px) {
+  #featured-section-first-cards > div > div > a > img {
+    width: 128px !important;
+    height: 168px !important;
   }
 }

@@ -111,7 +111,7 @@ main {
   #main-section .banner-section {
     height: 400px;
   }
-  
+
   #main-section .banner-section img {
     width: 85%;
     height: 400px;
@@ -122,10 +122,17 @@ main {
 
 @media (max-width: 768px) {
   #main-section .banner-section {
-    height: 300px;
+    height: 500px;
+    margin-top: -12vh !important;
   }
-  #main-section .banner-section img{
-    height: 300px;
+  #main-section .banner-section img {
+    height: 500px;
+  }
+  .content-section .blog-img-section img {
+    min-height: 250px;
+    max-height: 450px;
+    /* margin-left: 8vw;
+    margin-right: 8vw; */
   }
 }
 
@@ -212,14 +219,8 @@ main {
   gap: 120px;
 }
 
-@media (min-width: 768px) {
-  .content-section .lef-thand-side{
-    padding-left: 20%;
-  }
-}
-
 @media (max-width: 768px) {
-  .content-section .lef-thand-side{
+  .content-section .lef-thand-side {
     width: 100%;
   }
   .content-section .lef-thand-side .blog-img-section {
@@ -231,7 +232,7 @@ main {
   .content-section .lef-thand-side .blog-img-section img {
     width: 100%;
   }
-  
+
   #main-section .content-section {
     width: 100%;
     flex-direction: column;
@@ -382,42 +383,21 @@ title {
   }
 }
 
-/* #scrolcounter .fill-coller {
-  position: relative;
-  top: 0;
-  left: 50%;
-  background: #fd9165;
-  width: 1%;
-  height: 100%;
-} */
-
-/* #scrolcounter .fill-coller {
-  position: relative;
-  top: 0;
-  left: 50%;
-  height: 50%;
-  background: #fd9165;
-  width: 30%;
-  border-radius: 0 0 80% 0;
-} */
-
-/* #scrolcounter .fill-coller {
-  position: relative;
-  top: 0;
-  left: 50%;
-  height: 50%;
-  background: #fd9165;
-  width: 100%;
-  border-radius: 0 0 0 0;
-} */
-
-/* #scrolcounter .fill-coller {
-  position: relative;
-  top: 0;
-  left: 50%;
-  height: 50%;
-  background: #fd9165;
-  width: 200%;
-  border-radius: 0 0 100% 0;
-} */
-
+@media (max-width: 500px) {
+  #main-section .banner-section {
+    /* width: auto; */
+  }
+  #main-section .banner-section img {
+    /* width: auto; */
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    -o-object-fit: cover;
+    -o-object-position: center;
+  }
+}
+@media (max-width: 390px) {
+  #main-section h1 {
+    margin-left: 2rem;
+  }
+}
