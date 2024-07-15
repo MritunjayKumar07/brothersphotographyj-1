@@ -384,11 +384,8 @@ title {
 }
 
 @media (max-width: 500px) {
-  #main-section .banner-section {
-    /* width: auto; */
-  }
+  
   #main-section .banner-section img {
-    /* width: auto; */
     display: flex;
     object-fit: cover;
     object-position: center;
